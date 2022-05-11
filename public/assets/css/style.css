@@ -1,0 +1,46 @@
+body {
+  /* background-color: black; */
+  /* background-image: linear-gradient(
+    to right top,
+    #0451c4,
+    #007de4,
+    #00a5f4,
+    #00caf8,
+    #00edf8
+  ); */
+  background: hsla(180, 100%, 50%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(180, 100%, 50%, 1) 58%,
+    hsla(163, 99%, 52%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(180, 100%, 50%, 1) 58%,
+    hsla(163, 99%, 52%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(180, 100%, 50%, 1) 58%,
+    hsla(163, 99%, 52%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00FDFD", endColorstr="#0AFEB9", GradientType=1 );
+  height: 100vh;
+}
+
+.card-lists {
+  overflow-x: auto;
+}
+.tag {
+  width: auto;
+}
+.column.is-one-quarter.panel {
+  width: auto;
+}
+.box {
+  width: auto;
+}

@@ -1,0 +1,47 @@
+{
+	"name": "s6-okanban-mrsnakedoc",
+	"version": "1.0.0",
+	"description": "## jour 2 : BDD",
+	"main": "index.js",
+	"directories": {
+		"doc": "doc"
+	},
+	"scripts": {
+		"prestart": "npm run front:prod",
+		"start": "NODE_ENV=prod node -r dotenv/config index.js",
+		"predev": "npm run front:dev",
+		"dev": "NODE_ENV=dev nodemon -r dotenv/config index.js",
+		"front:dev": "npx browserify -e src/app.js -o public/assets/js/bundle.js --debug",
+		"front:prod": "npx browserify -p tinyify -e src/app.js | npx uglify-js public/assets/js/bundle.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/O-clock-XIII/S6-oKanban-MrSnakeDoc.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/O-clock-XIII/S6-oKanban-MrSnakeDoc/issues"
+	},
+	"homepage": "https://github.com/O-clock-XIII/S6-oKanban-MrSnakeDoc#readme",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^10.0.0",
+		"esm": "^3.2.25",
+		"express": "^4.17.1",
+		"lodash.merge": "^4.6.2",
+		"pg": "^8.7.1",
+		"sanitizer": "^0.1.3",
+		"sequelize": "^6.8.0",
+		"swagger-ui-express": "^4.1.6",
+		"axios": "^0.24.0",
+		"browserify": "^17.0.0",
+		"tinyify": "^3.0.0",
+		"uglify-js": "^2.8.29"
+	},
+	"prettier": {
+		"semi": true,
+		"useTabs": true
+	}
+}
